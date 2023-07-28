@@ -52,13 +52,13 @@ async def get_msg(userbot, client, bot, sender, edit_id, msg_link, i):
                     await client.send_message(sender, msg.text.markdown)
                     await edit.delete()
                     return
-            edit = await client.edit_message_text(sender, edit_id, "Trying to Download.")
+            edit = await client.edit_message_text(sender, edit_id, "Downloading....")
             file = await userbot.download_media(
                 msg,
                 progress=progress_for_pyrogram,
                 progress_args=(
                     client,
-                    "**DOWNLOADING:**\n",
+                    "**🔻 DOWNLOADING:**\n",
                     edit,
                     time.time()
                 )
@@ -86,7 +86,7 @@ async def get_msg(userbot, client, bot, sender, edit_id, msg_link, i):
                     progress=progress_for_pyrogram,
                     progress_args=(
                         client,
-                        '**UPLOADING:**\n',
+                        '**🔺 UPLOADING:**\n',
                         edit,
                         time.time()
                     )
@@ -110,7 +110,7 @@ async def get_msg(userbot, client, bot, sender, edit_id, msg_link, i):
                     progress=progress_for_pyrogram,
                     progress_args=(
                         client,
-                        '**UPLOADING:**\n',
+                        '**🔺 UPLOADING:**\n',
                         edit,
                         time.time()
                     )
